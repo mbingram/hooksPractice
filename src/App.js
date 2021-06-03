@@ -1,8 +1,11 @@
-import React, {useState} from 'react';
+import React from 'react';
+import { useFetch } from './useFetch';
 import { useForm } from './useForm';
 
 function App() {
   const [values, handleChange] = useForm({ email: '', password: '' });
+
+  useFetch('http://numbersapi.com/43/trivia');
 
   return (
     <div>
